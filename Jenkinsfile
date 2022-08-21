@@ -6,6 +6,11 @@ pipeline {
         }
     }
     stages {
+        stage('Get Path') { 
+            steps {
+                sh 'pwd' 
+            }
+        }
         stage('Build') { 
             steps {
                 sh 'npm install' 
