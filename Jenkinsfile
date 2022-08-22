@@ -13,9 +13,9 @@ pipeline {
         }
         stage('Build') { 
             steps {
-                sh '''#!/bin/bash
-                        npm install && npm run dev" 
-                '''
+                nodejs() {
+                    sh 'npm install'
+                }
             }
         }
     }
