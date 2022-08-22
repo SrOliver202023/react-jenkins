@@ -9,6 +9,8 @@ pipeline {
         stage('Get Path') { 
             steps {
                 sh 'pwd' 
+                sh 'whoami' 
+                sh '$user' 
             }
         }
         stage('Build') { 
