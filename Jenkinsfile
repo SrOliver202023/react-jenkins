@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Get Ip') { 
             steps {
-                sh 'hostname -I' 
+                sh 'hostname -i' 
             }
         }
         stage('Packages') { 
