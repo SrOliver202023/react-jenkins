@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'node:alpine' 
-            args '-p 3000:3000' 
+            args '--name=cnode -p 3000:3000' 
         }
     }
 
@@ -19,7 +19,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'node -v' 
-                npm '-v' 
+                sh 'docker ps'
             }
         }
     }
