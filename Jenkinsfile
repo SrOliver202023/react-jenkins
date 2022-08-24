@@ -8,6 +8,7 @@ pipeline {
 
     environment {
         CI = 'true'
+        HOME = '.'
     }
 
     stages {
@@ -19,7 +20,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'node -v' 
-                sh 'docker ps'
+                sh "npm install"
             }
         }
     }
