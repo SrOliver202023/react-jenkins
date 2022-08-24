@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'node:alpine' 
-            args '--name=cnode -p 4173:4173' 
+            args '--name=react-jenkins -p 4173:4173' 
         }
     }
 
