@@ -20,6 +20,9 @@ pipeline {
             steps {
                 sh 'node -v' 
             }
+            steps {
+                sh 'npm -v' 
+            }
         }
     }
 }
