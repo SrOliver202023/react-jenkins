@@ -19,8 +19,6 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'node -v' 
-            }
-            steps {
                 sh 'npm -v' 
             }
         }
