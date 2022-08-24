@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'node:alpine' 
-            args '--name=cnode -p 3000:3000' 
+            args '--name=cnode -p 4173:4173' 
         }
     }
 
