@@ -17,12 +17,24 @@ pipeline {
                 sh 'pwd' 
             }
         }
+        stage('Get Ip') { 
+            steps {
+                sh 'hostname -I' 
+            }
+        }
+        stage('Packages') { 
+            steps {
+                sh "npm install"
+            }
+        }
         stage('Build') { 
             steps {
-                sh 'node -v' 
-                sh "npm install"
-                sh "npm run dev"
-
+                sh "npm run build"
+            }
+        }
+        stage('Start') { 
+            steps {
+                sh "npm run build"
             }
         }
     }
