@@ -14,7 +14,7 @@ pipeline {
         stage('Build') { 
             steps {
                 nodejs(nodeJSInstallationName: 'Node 16.15.0') {
-                    sh 'npm -v'
+                    npm "-v"
                 }
             }
         }
