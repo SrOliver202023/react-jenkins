@@ -32,10 +32,12 @@ pipeline {
                 sh "npm run build"
             }
         }
-        stage('Start') { 
-            steps {
-                sh "npm run preview"
-            }
+
+    }
+
+    post {
+        always {
+            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
 }
