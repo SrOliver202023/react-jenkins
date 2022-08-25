@@ -37,6 +37,7 @@ pipeline {
 
     post {
         always {
+            mail bcc: '', body: 'Hello Pipeline!', cc: 'emmerson.oliveira@rotatransportes.com.br', from: 'sroliver201923@gmail.com', replyTo: '', subject: 'Jenkins', to: 'emmerson.oliveira@rotatransportes.com.br'
             emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
